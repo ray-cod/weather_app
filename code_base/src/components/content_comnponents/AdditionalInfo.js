@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AdditionalInfo = () => {
+const AdditionalInfo = ({ data }) => {
   return (
     <div className='Additional-info'>
       Additional Info
