@@ -6,20 +6,23 @@ import AdditionalInfo from './content_comnponents/AdditionalInfo'
 import WeatherContext from '../context/Weather.context'
 import Loader from './Loader'
 import '../styles/content.css'
+import current from '../api/current-weather.json'
+import daily from '../api/daily-forecast.json'
+import hourly from '../api/hourly-forecast.json'
 
 const Content = () => {
 
-  const { loading, currentWeather, todayForecast, weekForecast } = useContext(WeatherContext)
+  const { loading, currentWeather, hourlyForecast, dailyForecast } = useContext(WeatherContext)
   return (
     <main className='Main'>
       {loading ? (
         <Loader />
       ) : (
         <>
-          <CurrentWeather data={currentWeather}/>
-          <WeekForecast data={weekForecast}/>
-          <TodayForecast data={todayForecast}/>
-          <AdditionalInfo data={currentWeather}/>
+          <CurrentWeather data={current.current}/>
+          <WeekForecast title='Week' data={daily.daily.data}/>
+          <TodayForecast title='Today' data={hourly.hourly.data}/>
+          <AdditionalInfo data={current.current}/>
         </>
       )}
     </main>

@@ -1,11 +1,11 @@
 import React from 'react'
 import HourlyWidget from './HourlyWidget'
 import HorizontallyScrollable from '../HorizontallyScrollable';
+import '../../styles/forecast.css'
 
 const TodayForecast = ({ title, data }) => {
   return (
     <div className='Today-forecast'>
-      ----------------------------------------------------------------------
       <div className='forecast-container'>
         <h3>{title}</h3>
         <HorizontallyScrollable className='widget-container'>
@@ -16,7 +16,6 @@ const TodayForecast = ({ title, data }) => {
           ))}
         </HorizontallyScrollable>
       </div>
-      ----------------------------------------------------------------------
     </div>
   )
 }
