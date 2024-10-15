@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import WeatherContext from '../../context/Weather.context';
 import '../../styles/forecast.css'
+import HorizontallyScrollable from '../HorizontallyScrollable';
 
 const AdditionalInfo = ({ data }) => {
   const {
@@ -64,21 +65,27 @@ const AdditionalInfo = ({ data }) => {
 
 return (
     <div className='Additional-info'>
+      <h3>Additional Info</h3>
+      <div >
+        <HorizontallyScrollable className='Details'>
       {otherInfoWidgets.map(({ id, name, icon, value, unit }) => (
-        <div className='widget' key={id}>
+          <div className='widget' key={id}>
           <div className='widget-container'>
-            <div className='info'>
-              <div className='icon'>
+            <div className='icon'>
                 <i className={`bi bi-${icon}`}></i>
               </div>
+            <div className='info'>
               <div className='value'>
                 {value} {unit}
               </div>
+              <div className='name'>{name}</div>
             </div>
-            <div className='name'>{name}</div>
           </div>
         </div>
       ))}
+      </HorizontallyScrollable>
+      </div>
+      
     </div>
 )
 }

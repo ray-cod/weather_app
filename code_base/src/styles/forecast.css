@@ -1,9 +1,9 @@
 
-.Forecast {
+.Today-forecast {
   margin-top: 2rem;
 }
 
-.Forecast .widget-container {
+.Today-forecast .widget-container {
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -11,7 +11,7 @@
   padding-top: 1.5rem;
 }
 
-.Forecast .widget-container .widget {
+.Today-forecast .widget-container .widget {
   position: relative;
   cursor: pointer;
 
@@ -28,33 +28,58 @@
   border-radius: 1rem;
 }
 
-.Forecast .widget-container .widget .day {
+.Today-forecast .widget-container .widget .day {
   position: absolute;
   top: -1.5rem;
 }
 
-.Forecast .widget-container .widget .icon-temp {
+.Today-forecast .widget-container .widget .icon-temp {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0.75rem 0;
 }
 
-.Forecast .widget-container .widget .icon-temp img {
+.Today-forecast .widget-container .widget .icon-temp img {
   width: 40px;
   margin-right: 0.25rem;
 }
 
-.Forecast .widget-container .widget .wind {
+.Today-forecast .widget-container .widget .wind {
   margin-top: 0.25rem;
   display: flex;
 }
 
-.Forecast .widget-container .widget .wind .speed {
+.Today-forecast .widget-container .widget .wind .speed {
   margin-right: 0.25rem;
 }
 
-.Forecast .widget-container .widget .wind .wind-dir {
+.Today-forecast .widget-container .widget .wind .wind-dir {
   font-size: 0.8rem;
   margin-left: 0.25rem;
+}
+
+.Today-forecast .widget-container .widget{
+  border: 1px solid rgba(255, 255, 255, 0.534);
+}
+
+.Additional-info .Details{
+  margin-top: 20px;
+  display: flex;
+  gap: 70px;
+}
+
+.Additional-info .value, 
+.Additional-info .name{
+  white-space: nowrap;
+}
+
+.Additional-info .widget-container{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.Additional-info .widget-container .icon{
+  font-size: 30px;
 }

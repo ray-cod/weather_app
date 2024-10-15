@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react';
 import WeatherContext from '../../context/Weather.context';
 import WeatherIcon from '../WeatherIcon';
+import '../../styles/currentWeather.css';
 
 const CurrentWeather = ({ data }) => {
     const {
@@ -21,19 +22,20 @@ const CurrentWeather = ({ data }) => {
 
   return (
     <div className='Current-weather'>
-      <div className='temperature'>
-        <div className='weather-icon'>
-          <WeatherIcon iconNumber={icon_num} summary={summary} />
+      <div className='Info'>
+        <h1 className='location'>Johannesburg</h1>
+        <p className='Date'>September 25,2024</p>
+        <WeatherIcon iconNumber={icon_num} summary={summary} />
+        <h2 className='Summary'>{summary}</h2>
+      </div>
+      <div className='Temperature'>
+        <div className='real'>
+          {Math.round(temperature)} &deg;{units.temperature}
         </div>
-        <div className='value'>
-          <div className='real'>
-            {Math.round(temperature)} {units.temperature}
-          </div>
-          <div className='feels_like'>
-            feels like {Math.round(feels_like)} {units.temperature}
-          </div>
+        <div className='feels_like'>
+          {Math.round(feels_like)} &deg;{units.temperature}C/ 
+          {Math.round((Math.round(feels_like)*9/5)+32)} &deg;F
         </div>
-        <div className='summary'>{summary}</div>
       </div>
     </div>
   )

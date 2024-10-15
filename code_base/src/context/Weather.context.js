@@ -11,7 +11,7 @@ function WeatherProvider({ children }) {
   const [hourlyForecast, setHourlyForecast] = useState([]);
   const [dailyForecast, setDailyForecast] = useState([]);
   const [measurementSystem, setMeasurementSystem] = useState(MEASUREMENT_SYSTEMS.AUTO);
-  const [units, setUnits] = useState({});
+  const [units, setUnits] = useState(UNITS.metric);
 
   useEffect(() => {
     async function _getWeatherData() {
@@ -20,7 +20,7 @@ function WeatherProvider({ children }) {
         const cw = await getWeatherData('current', place.place_id, measurementSystem);
         if (cw && cw.current) {
           setCurrentWeather(cw.current);
-          setUnits(UNITS[cw.units] || {});
+          setUnits(UNITS[cw.units] || UNITS.metric);
         } else {
           console.error('Current weather data is missing or malformed.');
         }
@@ -37,7 +37,6 @@ function WeatherProvider({ children }) {
           setDailyForecast(df.daily.data);
         } else {
           console.error('Daily forecast data is missing or malformed.');
-          console.log(df.daily)
         }
       } catch (error) {
         console.error('Error fetching weather data:', error);

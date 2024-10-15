@@ -1,0 +1,27 @@
+.Current-weather {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Temperature .real{
+    font-size: 8em;
+    white-space: nowrap;
+}
+
+.Temperature .feels_like{
+    font-size: 1.3em;
+}
+
+.Temperature{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.Summary{
+    font-size: 1.2em;
+}
+
+.Current-weather img {
+    width: 100px;
+}

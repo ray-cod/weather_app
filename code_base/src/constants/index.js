@@ -18,7 +18,7 @@ export const DEFAULT_PLACE = {
   };
   export const UNITS = {
     metric: {
-      temperature: '°C',
+      temperature: 'C',
       precipitation: 'mm/h',
       wind_speed: 'm/s',
       visibility: 'km',
@@ -27,7 +27,7 @@ export const DEFAULT_PLACE = {
       cloud_cover: '%',
     },
     us: {
-      temperature: '°F',
+      temperature: 'F',
       precipitation: 'in/h',
       wind_speed: 'mph',
       visibility: 'mi',
@@ -36,7 +36,7 @@ export const DEFAULT_PLACE = {
       cloud_cover: '%',
     },
     uk: {
-      temperature: '°C',
+      temperature: 'C',
       precipitation: 'mm/h',
       wind_speed: 'mph',
       visibility: 'mi',
@@ -45,7 +45,7 @@ export const DEFAULT_PLACE = {
       cloud_cover: '%',
     },
     ca: {
-      temperature: '°C',
+      temperature: 'C',
       precipitation: 'mm/h',
       wind_speed: 'km/h',
       visibility: 'km',

@@ -11,7 +11,7 @@ export async function getWeatherData(
     method: 'GET',
     url: 'https://ai-weather-by-meteosource.p.rapidapi.com/' + endpoint,
     params: {
-      place_id: place,
+      place_id: place.name,
       timezone: 'auto',
       language: 'en',
       units: 'auto'

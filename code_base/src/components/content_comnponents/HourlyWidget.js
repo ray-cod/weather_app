@@ -4,6 +4,7 @@ import WeatherContext from '../../context/Weather.context';
 
 const HourlyWidget = ({ data }) => {
   const { units } = useContext(WeatherContext);
+  console.log(units);
   const { date, icon, summary, temperature, precipitation, wind } =
     data;
 
@@ -53,7 +54,7 @@ const HourlyWidget = ({ data }) => {
           <WeatherIcon iconNumber={icon} summary={summary} />
         </div>
         <div className='temperature'>
-          {Math.round(temperature)} {units.temperature}
+          {Math.round(temperature)} &deg;{units.temperature}
         </div>
       </div>
       <div className='precipitation'>
@@ -70,7 +71,6 @@ const HourlyWidget = ({ data }) => {
           <i className='bi bi-send-fill'></i>
         </div>
       </div>
-      -------------------------------------------------------
     </div>
   )
 }

@@ -20,8 +20,8 @@ const Content = () => {
       ) : (
         <>
           <CurrentWeather data={current.current}/>
-          <WeekForecast title='Week' data={daily.daily.data}/>
-          <TodayForecast title='Today' data={hourly.hourly.data}/>
+          <WeekForecast title='Daily Forecast' data={daily.daily.data}/>
+          <TodayForecast title="Today's Forecast" data={hourly.hourly.data}/>
           <AdditionalInfo data={current.current}/>
         </>
       )}
