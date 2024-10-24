@@ -33,7 +33,7 @@ const CurrentWeather = ({ data }) => {
           {Math.round(temperature)} &deg;{units.temperature}
         </div>
         <div className='feels_like'>
-          {Math.round(feels_like)} &deg;{units.temperature}C/ 
+          {Math.round(feels_like)} &deg;{units.temperature}/ 
           {Math.round((Math.round(feels_like)*9/5)+32)} &deg;F
         </div>
       </div>

@@ -42,7 +42,7 @@ const DailyWidget = ({ data }) => {
         <div className='temperature'>
           <div className='max'>
             {Math.round(temperature_max)} &deg;{units.temperature}
-          </div>
+          </div> / 
           <div className='min'>
             {Math.round(temperature_min)} &deg;{units.temperature}
           </div>

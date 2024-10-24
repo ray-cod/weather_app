@@ -1,3 +1,11 @@
+:root {
+  --secondary-text-color: #b0b3b8;
+  --primary-text-color: #e4e6eb;
+  --header-bg-color: #242526;
+  --border-color: #393a3b;
+  --header-height: 70px; /* Example, replace with your actual value */
+}
+
 .Header {
     display: flex;
     flex-flow: row nowrap;
@@ -18,7 +26,6 @@
     color: purple;
 }
 
-/* @use '../variables/variables' as *; */
 
 .search-container {
   display: flex;
@@ -26,64 +33,58 @@
   border-radius: 20px;
   padding: 0 1rem;
   background-color: rgb(27, 27, 27);
-
-  .search-icon,
-  .search-input input {
-    height: 40px;
-  }
-  .search-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 1.3rem;
-    padding-right: 1rem;
-  }
-  .search-input input {
-    background-color: transparent;
-    color: var(--primary-text-color);
-    border: none;
-    outline: none;
-    font-size: 1rem;
-  }
 }
+
+.search-container .search-icon,
+.search-container .search-input input {
+  height: 40px;
+}
+
+.search-container .search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  padding-right: 1rem;
+}
+
+.search-container .search-input input {
+  background-color: transparent;
+  color: var(--primary-text-color);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
 .search-results {
   border-radius: 0.5rem;
-
   background-color: var(--header-bg-color);
-
   position: absolute;
   z-index: 1;
   top: calc(2px + 0.25rem);
-
   width: 50%;
   max-height: 50vh;
-
   overflow-x: hidden;
-
-  .results-container {
-    .result {
-      padding: 1rem;
-      font-size: 1.1rem;
-
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--border-color);
-      }
-    }
-  }
 }
 
-
-button{
-    padding-block: 0.84rem;
-    padding-inline: 2rem;
-    border: none;
-    border-radius: 20px;
-    background-color: rgb(216, 102, 216);
+.search-results .results-container .result {
+  padding: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
 }
 
-button:active{
-    opacity: 0.8;
+.search-results .results-container .result:hover {
+  background-color: var(--border-color);
+}
+
+button {
+  padding-block: 0.84rem;
+  padding-inline: 2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(216, 102, 216);
+}
+
+button:active {
+  opacity: 0.8;
 }

@@ -66,7 +66,12 @@
 .Additional-info .Details{
   margin-top: 20px;
   display: flex;
+  overflow: hidden;
   gap: 70px;
+  background-color: rgb(15, 15, 15);
+  padding-block: 2em;
+  padding-inline: 1em;
+  border-radius: 20px;
 }
 
 .Additional-info .value, 
@@ -82,4 +87,18 @@
 
 .Additional-info .widget-container .icon{
   font-size: 30px;
+}
+
+/*-------------------------------------------*/
+
+.Week-forecast .widget{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  padding-block: 1.5em;
+}
+
+.Week-forecast .temperature{
+  display: flex;
+  justify-content: space-between;
 }

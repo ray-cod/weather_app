@@ -9,19 +9,19 @@ export async function getWeatherData(
 ) {
   const options = {
     method: 'GET',
-    url: 'https://ai-weather-by-meteosource.p.rapidapi.com/' + endpoint,
+    url: `https://ai-weather-by-meteosource.p.rapidapi.com/${endpoint}`,
     params: {
       place_id: place.name,
       timezone: 'auto',
       language: 'en',
-      units: 'auto'
+      units: measurementSystem
     },
     headers: {
       'x-rapidapi-key': API_KEY,
       'x-rapidapi-host': 'ai-weather-by-meteosource.p.rapidapi.com'
     }
   };
-
+  
   try {
     const response = await axios.request(options);
     console.log(response.data);
@@ -35,18 +35,18 @@ export async function searchPlaces(text) {
     method: 'GET',
     url: 'https://ai-weather-by-meteosource.p.rapidapi.com/find_places',
     params: {
-      text,
-      language: 'en',
+      text: 'fishermans wharf',
+      language: 'en'
     },
     headers: {
       'x-rapidapi-key': API_KEY,
-      'x-rapidapi-host': 'ai-weather-by-meteosource.p.rapidapi.com',
-    },
+      'x-rapidapi-host': 'ai-weather-by-meteosource.p.rapidapi.com'
+    }
   };
-
+  
   try {
     const response = await axios.request(options);
-    return response.data;
+    console.log(response.data);
   } catch (error) {
     console.error(error);
   }

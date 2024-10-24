@@ -1,6 +1,7 @@
 import React from 'react'
 import DailyWidget from './DailyWidget'
 import HorizontallyScrollable from '../HorizontallyScrollable'
+import '../../styles/forecast.css'
 
 const WeekForecast = ({ title, data }) => {
   return (

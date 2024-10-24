@@ -19,10 +19,10 @@ const Content = () => {
         <Loader />
       ) : (
         <>
-          <CurrentWeather data={current.current}/>
-          <WeekForecast title='Daily Forecast' data={daily.daily.data}/>
-          <TodayForecast title="Today's Forecast" data={hourly.hourly.data}/>
-          <AdditionalInfo data={current.current}/>
+          <CurrentWeather data={currentWeather}/>
+          <WeekForecast title='Daily Forecast' data={dailyForecast}/>
+          <TodayForecast title="Today's Forecast" data={hourlyForecast}/>
+          <AdditionalInfo data={currentWeather}/>
         </>
       )}
     </main>
