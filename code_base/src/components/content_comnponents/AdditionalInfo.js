@@ -6,12 +6,8 @@ import HorizontallyScrollable from '../HorizontallyScrollable';
 const AdditionalInfo = ({ data }) => {
   const {
     cloud_cover,
-    feels_like,
     humidity,
-    icon_num,
     precipitation,
-    summary,
-    temperature,
     uv_index,
     visibility,
     wind,

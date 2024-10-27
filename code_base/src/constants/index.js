@@ -1,13 +1,13 @@
 export const DEFAULT_PLACE = {
-    name: 'London',
-    place_id: 'london',
-    adm_area1: 'England',
-    adm_area2: 'Greater London',
-    country: 'United Kingdom',
-    lat: '51.50853N',
-    lon: '0.12574W',
-    timezone: 'Europe/London',
-    type: 'settlement',
+    name:"Johannesburg",
+    place_id:"johannesburg",
+    adm_area1:"Gauteng",
+    adm_area2:"City of Johannesburg Metropolitan Municipality",
+    country:"South Africa",
+    lat:"26.20227S",
+    lon:"28.04363E",
+    timezone:"Africa/Johannesburg",
+    type:"settlement",
   };
   export const MEASUREMENT_SYSTEMS = {
     AUTO: 'auto',

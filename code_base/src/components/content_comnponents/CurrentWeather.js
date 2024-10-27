@@ -6,25 +6,21 @@ import '../../styles/currentWeather.css';
 
 const CurrentWeather = ({ data }) => {
     const {
-      cloud_cover,
       feels_like,
-      humidity,
       icon_num,
-      precipitation,
       summary,
       temperature,
-      uv_index,
-      visibility,
-      wind,
     } = data;
-    const { units } = useContext(WeatherContext);
+    const { units, place } = useContext(WeatherContext);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = new Date().toLocaleDateString('en-US', options);
 
 
   return (
     <div className='Current-weather'>
       <div className='Info'>
-        <h1 className='location'>Johannesburg</h1>
-        <p className='Date'>September 25,2024</p>
+        <h1 className='location'>{place.name}</h1>
+        <p className='Date'>{formattedDate}</p>
         <WeatherIcon iconNumber={icon_num} summary={summary} />
         <h2 className='Summary'>{summary}</h2>
       </div>

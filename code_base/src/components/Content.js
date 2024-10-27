@@ -6,9 +6,6 @@ import AdditionalInfo from './content_comnponents/AdditionalInfo'
 import WeatherContext from '../context/Weather.context'
 import Loader from './Loader'
 import '../styles/content.css'
-import current from '../api/current-weather.json'
-import daily from '../api/daily-forecast.json'
-import hourly from '../api/hourly-forecast.json'
 
 const Content = () => {
 

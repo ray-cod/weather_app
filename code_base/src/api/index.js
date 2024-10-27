@@ -4,14 +4,14 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 export async function getWeatherData(
   endpoint,
-  place,
+  place_id,
   measurementSystem
 ) {
   const options = {
     method: 'GET',
     url: `https://ai-weather-by-meteosource.p.rapidapi.com/${endpoint}`,
     params: {
-      place_id: place.name,
+      place_id,
       timezone: 'auto',
       language: 'en',
       units: measurementSystem
@@ -25,6 +25,7 @@ export async function getWeatherData(
   try {
     const response = await axios.request(options);
     console.log(response.data);
+    return response.data;
   } catch (error) {
     console.error(error);
   }
@@ -35,7 +36,7 @@ export async function searchPlaces(text) {
     method: 'GET',
     url: 'https://ai-weather-by-meteosource.p.rapidapi.com/find_places',
     params: {
-      text: 'fishermans wharf',
+      text,
       language: 'en'
     },
     headers: {
@@ -47,6 +48,7 @@ export async function searchPlaces(text) {
   try {
     const response = await axios.request(options);
     console.log(response.data);
+    return response.data;
   } catch (error) {
     console.error(error);
   }
